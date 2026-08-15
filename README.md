@@ -65,8 +65,6 @@ Golf Shot GPS can then be launched from the Home Screen like an app.
 - GPS positions used for rounds remain on the user's device.
 - Golf Shot GPS currently does not transmit saved rounds or shot-position data to a server.
 
-<!-- Developer reminder: review this section and the in-app Welcome privacy wording before releasing analytics or installation-ID tracking. -->
-
 ## GPS Accuracy
 
 Measurements depend on the GPS accuracy of the user's device. Accuracy can vary with the device, satellite visibility, trees, buildings, surroundings, atmospheric conditions, and other factors. Golf Shot GPS displays available accuracy information where appropriate. Distances and positions are practical golf estimates, not survey-grade measurements.
@@ -74,10 +72,6 @@ Measurements depend on the GPS accuracy of the user's device. Accuracy can vary 
 ## Compatibility
 
 Golf Shot GPS is designed for modern browsers, including Safari on iPhone and iPad, Chrome on Android, Samsung Internet, and modern desktop Chrome, Edge, and Safari where applicable. Its primary use case is a GPS-capable smartphone on the golf course.
-
-### Map provider configuration
-
-The default base map is Esri. Developers can change the single `MAP_PROVIDER` constant in `index.html` to `esri`, `mapbox`, or `osm`. Esri uses authenticated ArcGIS Location Platform World Imagery plus the Static Basemap Tiles imagery-label overlay. Its dedicated public browser key is stored in `ESRI_API_KEY`, restricted to the canonical Enginity GitHub Pages URL, and has only the **Static basemap tiles** privilege. The key expires on 2027-08-13, usage is monitored in the ArcGIS account, and pay-as-you-go is disabled; the app contains no billing integration. Mapbox uses its Leaflet-compatible Static Tiles API path and requires a public, production-URL-restricted token in `MAPBOX_CONFIG`; it is not enabled for production. The OSM public tile service is a development/fallback option whose usage policy must be respected and may require replacement for significant public traffic. Mapbox's separate Mapbox GL JS map-load pricing model would require a future rendering-engine migration and is not used by this Leaflet implementation.
 
 ## Share Golf Shot GPS
 
